@@ -124,7 +124,7 @@ class ConsumerStrategies_CurlConsumer extends ConsumerStrategies_AbstractConsume
             return false;
         } else {
             curl_close($ch);
-            if (trim($response) == "1") {
+            if (trim($response) == "1" || trim($response) == "0") {
                 return true;
             } else {
                 $this->_handleError(0, $response);
